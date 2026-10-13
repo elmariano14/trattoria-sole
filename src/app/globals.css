@@ -35,14 +35,13 @@
       opacity: 1;
     }
   }
+  /* Bez animacji przezroczystości: talerz to element LCP, a Chrome liczy LCP dopiero od chwili, gdy element jest widoczny. */
   @keyframes plate {
     from {
       transform: rotate(-24deg) scale(0.96);
-      opacity: 0;
     }
     to {
       transform: rotate(0) scale(1);
-      opacity: 1;
     }
   }
 }
@@ -74,10 +73,14 @@
     text-wrap: pretty;
   }
 
+  /*
+   * Dwukolorowy pierścień fokusu: ciemny obrys + jasna szczelina.
+   * Widoczny z kontrastem ≥ 3:1 zarówno na kremowym, jak i na ciemnym tle (WCAG 1.4.11 / 2.4.7).
+   */
   :focus-visible {
-    outline: 2px solid var(--color-zafferano);
-    outline-offset: 3px;
-    border-radius: 4px;
+    outline: 2px solid var(--color-castagna);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px var(--color-pane);
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -96,7 +99,7 @@
   /* Kropkowany „prowadnik” między nazwą dania a ceną, jak w drukowanej karcie. */
   .menu-leader {
     flex: 1;
-    min-width: 1.5rem;
+    min-width: 0.75rem;
     border-bottom: 2px dotted var(--color-pane-line);
     transform: translateY(-0.3em);
   }

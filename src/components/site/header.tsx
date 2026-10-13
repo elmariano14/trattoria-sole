@@ -18,15 +18,15 @@ export function Header() {
 
   return (
     <header className="relative z-30 bg-castagna text-pane">
-      <div className="mx-auto flex h-16 max-w-6xl items-center gap-4 px-4 sm:px-6">
+      <div className="mx-auto flex h-16 max-w-6xl items-center gap-2 px-4 sm:gap-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2 text-pane" aria-label={`${restaurant.name}, strona główna`}>
-          <SunMark size={28} />
-          <span className="font-display text-[1.3rem] leading-none tracking-tight whitespace-nowrap sm:text-[1.375rem]">
+          <SunMark size={28} className="hidden min-[360px]:block" />
+          <span className="font-display text-[1.15rem] leading-none tracking-tight whitespace-nowrap min-[360px]:text-[1.3rem] sm:text-[1.375rem]">
             Trattoria Sole
           </span>
         </Link>
 
-        <nav aria-label="Główna" className="ml-auto flex items-center gap-1 sm:gap-2">
+        <nav aria-label="Główna" className="ml-auto flex items-center sm:gap-2">
           {/* Ścieżka jest znana dopiero w czasie żądania – bez niej linki renderują się bez podświetlenia. */}
           <Suspense fallback={<NavLinks pathname={null} />}>
             <NavLinksWithPath />
@@ -68,10 +68,18 @@ function NavLinks({ pathname }: { pathname: string | null }) {
         key={l.href}
         href={l.href}
         aria-current={active ? "page" : undefined}
-        className={`${l.short ? "" : "hidden md:inline-flex"} inline-flex min-h-11 items-center rounded-full px-3 text-[0.95rem] font-medium transition-colors hover:text-zafferano aria-[current=page]:text-zafferano`}
+        // Link bez krótkiej etykiety jest na telefonie całkiem ukryty (zamówienie prowadzi tam pasek koszyka).
+        // Uwaga: „hidden” i „inline-flex” nie mogą wystąpić razem – druga klasa nadpisałaby pierwszą.
+        className={`${l.short ? "inline-flex" : "hidden md:inline-flex"} min-h-11 items-center rounded-full px-2 text-[0.95rem] font-medium whitespace-nowrap transition-colors hover:text-zafferano aria-[current=page]:text-zafferano sm:px-3`}
       >
-        <span className="md:hidden">{l.short}</span>
-        <span className="hidden md:inline">{l.label}</span>
+        {l.short ? (
+          <>
+            <span className="md:hidden">{l.short}</span>
+            <span className="hidden md:inline">{l.label}</span>
+          </>
+        ) : (
+          l.label
+        )}
       </Link>
     );
   });

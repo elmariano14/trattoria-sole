@@ -71,11 +71,12 @@ async function Orders({ searchParams }: Pick<PageProps<"/admin">, "searchParams"
             {day === "7-dni" ? `od ${formatDayLong(from)}` : formatDayLong(from)}. Lista odświeża się co 20 sekund.
           </p>
         </div>
-        <Tabs items={Object.entries(DAYS).map(([k, label]) => ({ href: href({ dzien: k as Day }), label, active: k === day }))} />
+        <Tabs label="Dzień odbioru" items={Object.entries(DAYS).map(([k, label]) => ({ href: href({ dzien: k as Day }), label, active: k === day }))} />
       </div>
 
       <div className="mt-6">
         <Tabs
+          label="Status zamówień"
           items={(Object.keys(VIEWS) as View[]).map((k) => ({
             href: href({ widok: k }),
             label: `${VIEWS[k].label} (${countFor(k)})`,
@@ -120,9 +121,9 @@ async function Orders({ searchParams }: Pick<PageProps<"/admin">, "searchParams"
   );
 }
 
-function Tabs({ items }: { items: { href: string; label: string; active: boolean }[] }) {
+function Tabs({ label, items }: { label: string; items: { href: string; label: string; active: boolean }[] }) {
   return (
-    <nav className="no-scrollbar flex gap-1 overflow-x-auto">
+    <nav aria-label={label} className="no-scrollbar flex gap-1 overflow-x-auto">
       {items.map((t) => (
         <Link
           key={t.href}
@@ -150,7 +151,7 @@ function SlotLoad({ orders }: { orders: OrderWithItems[] }) {
       <h2 id="load-h" className="font-sans text-sm font-semibold">
         Obłożenie kuchni (limit {max} zamówienia na 15 minut)
       </h2>
-      <ul className="no-scrollbar mt-3 flex gap-2 overflow-x-auto">
+      <ul tabIndex={0} aria-label="Liczba zamówień w kolejnych slotach" className="no-scrollbar mt-3 flex gap-2 overflow-x-auto">
         {[...bySlot.entries()].map(([time, n]) => (
           <li
             key={time}

@@ -152,7 +152,7 @@ export function MenuBrowser({ unavailable }: { unavailable: string[] }) {
               </h2>
               <p className="mt-2 text-muted">{c.description}</p>
             </div>
-            <ul className="mt-4 grid gap-x-14 md:grid-cols-2">
+            <ul className="mt-4 grid gap-x-14 lg:grid-cols-2">
               {c.dishes.map((d) => (
                 <DishRow key={d.id} dish={d} unavailable={unavailableSet.has(d.id)} />
               ))}
@@ -174,12 +174,12 @@ function setFiltersAndUrl(next: Filter[], set: (f: Filter[]) => void) {
 function DishRow({ dish, unavailable }: { dish: Dish; unavailable: boolean }) {
   return (
     <li className="flex gap-4 border-b border-pane-line py-6 sm:gap-5">
-      <div className={`relative size-20 shrink-0 overflow-hidden rounded-full ring-1 ring-castagna/10 sm:size-28 ${unavailable ? "grayscale opacity-60" : ""}`}>
-        <Image src={dish.image} alt="" fill sizes="(min-width: 640px) 112px, 80px" className="object-cover" />
+      <div className={`relative size-16 shrink-0 overflow-hidden rounded-full ring-1 ring-castagna/10 min-[360px]:size-20 sm:size-28 ${unavailable ? "grayscale opacity-60" : ""}`}>
+        <Image src={dish.image} alt="" fill sizes="(min-width: 640px) 112px, (min-width: 360px) 80px, 64px" className="object-cover" />
       </div>
       <div className="min-w-0 flex-1">
         <div className="flex items-baseline gap-2">
-          <h3 className={`font-display text-[1.35rem] leading-tight ${unavailable ? "text-castagna/60" : ""}`}>{dish.name}</h3>
+          <h3 className={`min-w-0 font-display text-[1.2rem] leading-tight [overflow-wrap:anywhere] min-[360px]:text-[1.35rem] ${unavailable ? "text-castagna/60" : ""}`}>{dish.name}</h3>
           <span className="menu-leader" aria-hidden />
           <span className="font-display text-xl whitespace-nowrap tabular-nums">{formatPrice(dish.price)}</span>
         </div>

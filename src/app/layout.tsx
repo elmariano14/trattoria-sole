@@ -7,7 +7,8 @@ import "./globals.css";
 const bodoni = Bodoni_Moda({
   variable: "--font-bodoni",
   subsets: ["latin", "latin-ext"],
-  style: ["normal", "italic"],
+  // Bez kursywy: oszczędza dwa pliki fontu (~50 KB), a nigdzie jej nie potrzebujemy.
+  style: "normal",
   axes: ["opsz"],
 });
 

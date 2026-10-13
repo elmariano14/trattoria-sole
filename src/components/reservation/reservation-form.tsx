@@ -6,7 +6,7 @@ import { restaurant } from "@data/restaurant";
 import { createReservation, type ReservationState } from "@/app/actions/reservation";
 import { CheckIcon } from "@/components/icons";
 import { reservationDateRange, reservationTimes } from "@/lib/slots";
-import { formatDayLong } from "@/lib/time";
+import { addDays, formatDayLong } from "@/lib/time";
 
 const initial: ReservationState = { status: "idle" };
 
@@ -26,7 +26,17 @@ export function ReservationForm() {
     const r = reservationDateRange(new Date());
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setRange(r);
-    setDate((d) => d || r.min);
+    // Domyślnie pierwszy dzień, w którym są jeszcze wolne godziny (np. jutro, gdy dziś jest już za późno).
+    const now = new Date();
+    let first = r.min;
+    for (let i = 0; i < 8; i++) {
+      const d = addDays(r.min, i);
+      if (reservationTimes(d, now).length > 0) {
+        first = d;
+        break;
+      }
+    }
+    setDate((d) => d || first);
   }, []);
 
   useEffect(() => {
@@ -85,16 +95,23 @@ export function ReservationForm() {
             max={range?.max}
             value={date}
             onChange={(e) => setDate(e.target.value)}
-            {...a11y("date")}
+            aria-invalid={!!errors.date}
+            aria-describedby={[`${id}-day`, errors.date && `${id}-date-err`].filter(Boolean).join(" ")}
           />
-          {date && <p className="mt-1.5 text-sm text-muted first-letter:uppercase">{formatDayLong(date)}</p>}
+          {/* Stała wysokość – tekst pojawia się po hydracji i nie przesuwa układu. */}
+          <p id={`${id}-day`} className="mt-1.5 min-h-5 text-sm text-muted first-letter:uppercase">
+            {date && formatDayLong(date)}
+          </p>
           {err("date")}
         </div>
         <div>
           <label htmlFor={`${id}-time`} className="field-label">
             Godzina
           </label>
-          <select id={`${id}-time`} name="time" required className="field" value={time} onChange={(e) => setTime(e.target.value)} disabled={times.length === 0} {...a11y("time")}>
+          <select id={`${id}-time`} name="time" required className="field" value={time} onChange={(e) => setTime(e.target.value)} disabled={times.length === 0}
+            aria-invalid={!!errors.time}
+            aria-describedby={[times.length === 0 && date && `${id}-closed`, errors.time && `${id}-time-err`].filter(Boolean).join(" ") || undefined}
+          >
             {times.length === 0 ? <option value="">Nieczynne</option> : times.map((t) => <option key={t}>{t}</option>)}
           </select>
           {err("time")}
@@ -114,7 +131,7 @@ export function ReservationForm() {
         </div>
       </div>
       {date && times.length === 0 && (
-        <p className="text-sm text-muted">W ten dzień nie przyjmujemy już rezerwacji (w poniedziałki restauracja jest nieczynna). Wybierz inną datę.</p>
+        <p id={`${id}-closed`} role="status" className="text-sm text-muted">W ten dzień nie przyjmujemy już rezerwacji (w poniedziałki restauracja jest nieczynna). Wybierz inną datę.</p>
       )}
 
       <div className="grid gap-5 sm:grid-cols-2">

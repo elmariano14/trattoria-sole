@@ -15,8 +15,8 @@ export function Hero() {
       {/* linia „horyzontu” – krawędź stołu */}
       <div aria-hidden className="absolute top-[62%] right-0 left-1/2 hidden h-px bg-castagna-line md:block" />
 
-      <div className="relative mx-auto grid max-w-6xl items-center gap-4 px-4 sm:px-6 md:min-h-[640px] md:grid-cols-[1.05fr_1fr] md:gap-10">
-        <div className="relative order-1 -mr-[22vw] ml-[8vw] aspect-square md:order-2 md:mr-[-8%] md:ml-0">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-4 px-4 sm:px-6 md:min-h-[600px] md:grid-cols-2 md:gap-8 lg:min-h-[640px] lg:grid-cols-[1.05fr_1fr] lg:gap-10">
+        <div className="relative order-1 -mr-[22vw] ml-[8vw] aspect-square md:order-2 md:mr-[-22%] md:ml-0 lg:mr-[-8%]">
           <div
             aria-hidden
             className="absolute right-[2%] bottom-[2%] size-[82%] animate-sunrise rounded-full bg-zafferano"
@@ -28,7 +28,7 @@ export function Hero() {
               fill
               priority
               placeholder="blur"
-              sizes="(min-width: 768px) 520px, 85vw"
+              sizes="(min-width: 1024px) 520px, (min-width: 768px) 50vw, 96vw"
               className="object-cover"
             />
           </div>
@@ -36,7 +36,7 @@ export function Hero() {
 
         <div className="relative order-2 pb-14 md:order-1 md:py-24">
           <OpenStatus className="text-pane/80" />
-          <h1 className="mt-4 text-[clamp(3.6rem,15vw,8.25rem)] leading-[0.88] tracking-[-0.02em]">
+          <h1 className="mt-4 text-[clamp(3.6rem,15vw,8.25rem)] md:text-[clamp(4.5rem,9.5vw,8.25rem)] leading-[0.88] tracking-[-0.02em]">
             Trattoria
             <br />
             Sole

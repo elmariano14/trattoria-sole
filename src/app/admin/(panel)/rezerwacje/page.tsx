@@ -57,7 +57,7 @@ async function Reservations({ searchParams }: Pick<PageProps<"/admin/rezerwacje"
             {restaurant.reservations.maxGuestsPerSlot} osób na pół godziny.
           </p>
         </div>
-        <nav className="no-scrollbar flex gap-1 overflow-x-auto">
+        <nav aria-label="Zakres dat" className="no-scrollbar flex gap-1 overflow-x-auto">
           {(Object.keys(RANGES) as Range[]).map((k) => (
             <Link
               key={k}

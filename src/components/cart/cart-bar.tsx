@@ -27,7 +27,7 @@ export function CartBar() {
   const items = count === 1 ? "1 pozycja" : count < 5 ? `${count} pozycje` : `${count} pozycji`;
 
   return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-40 px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
+    <aside aria-label="Twoje zamówienie" className="pointer-events-none fixed inset-x-0 bottom-0 z-40 px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
       <p role="status" aria-live="polite" className="sr-only">
         {toast}
       </p>
@@ -41,6 +41,6 @@ export function CartBar() {
         </span>
         <span className="btn btn-primary ml-auto shrink-0">Przejdź do zamówienia</span>
       </Link>
-    </div>
+    </aside>
   );
 }

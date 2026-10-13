@@ -7,6 +7,7 @@ import { PhoneIcon, PinIcon, StarIcon } from "@/components/icons";
 import { featuredDishes } from "@/lib/menu";
 import { formatPrice } from "@/lib/money";
 import { HoursTable } from "./hours-table";
+import { MapEmbed } from "./map-embed";
 import oven from "../../../public/images/about/piec.webp";
 import table from "../../../public/images/hero/stol-noc.webp";
 
@@ -125,8 +126,6 @@ export function PickupHowTo() {
 }
 
 export function HoursAndMap() {
-  const { lat, lng } = restaurant.geo;
-  const bbox = [lng - 0.012, lat - 0.0055, lng + 0.012, lat + 0.0055].join(",");
   return (
     <section aria-labelledby="godziny-h" className="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 md:grid-cols-[1fr_1.3fr] md:py-28">
       <div>
@@ -150,17 +149,7 @@ export function HoursAndMap() {
           </p>
         </address>
       </div>
-      <div className="relative min-h-80 overflow-hidden rounded-[2rem] border border-pane-line bg-pane-deep">
-        <iframe
-          title="Mapa okolicy restauracji (OpenStreetMap)"
-          src={`https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik`}
-          loading="lazy"
-          className="absolute inset-0 size-full grayscale-[35%] sepia-[25%]"
-        />
-        <p className="pointer-events-none absolute top-3 left-3 rounded-full bg-pane/90 px-3 py-1 text-xs text-muted">
-          Lokalizacja przybliżona, adres fikcyjny
-        </p>
-      </div>
+      <MapEmbed />
     </section>
   );
 }
@@ -173,7 +162,7 @@ export function Reviews() {
           Co mówią goście
         </h2>
       </div>
-      <ul className="no-scrollbar mx-auto mt-10 flex max-w-6xl snap-x snap-mandatory scroll-px-4 gap-5 overflow-x-auto px-4 pb-2 sm:scroll-px-6 sm:px-6 lg:grid lg:grid-cols-3 lg:overflow-visible">
+      <ul tabIndex={0} aria-label="Opinie gości (przewiń w bok)" className="no-scrollbar mx-auto mt-10 flex max-w-6xl snap-x snap-mandatory scroll-px-4 gap-5 overflow-x-auto px-4 pb-2 sm:scroll-px-6 sm:px-6 lg:grid lg:grid-cols-3 lg:overflow-visible">
         {reviews.map((r) => (
           <li key={r.author} className="w-[82vw] max-w-sm shrink-0 snap-start lg:w-auto lg:max-w-none">
             <figure className="flex h-full flex-col rounded-3xl bg-[#fffaf1] p-6 ring-1 ring-pane-line">
@@ -182,7 +171,7 @@ export function Reviews() {
                   <StarIcon key={i} size={18} filled={i < r.rating} />
                 ))}
               </div>
-              <blockquote className="mt-4 font-display text-xl leading-snug italic">„{r.text}”</blockquote>
+              <blockquote className="mt-4 font-display text-[1.3rem] leading-snug">„{r.text}”</blockquote>
               <figcaption className="mt-auto pt-5 text-sm font-semibold text-muted">{r.author}</figcaption>
             </figure>
           </li>

@@ -308,13 +308,12 @@ function PickupStep({
         z kuchni świeże i na czas. Najwcześniejszy odbiór: {restaurant.pickup.leadMinutes} minut od zamówienia.
       </p>
 
-      <div role="tablist" aria-label="Dzień odbioru" className="no-scrollbar mt-6 flex gap-2 overflow-x-auto">
+      <div role="group" aria-label="Dzień odbioru" className="no-scrollbar mt-6 flex gap-2 overflow-x-auto">
         {days.map((d, i) => (
           <button
             key={d.date}
             type="button"
-            role="tab"
-            aria-selected={i === dayIndex}
+            aria-pressed={i === dayIndex}
             onClick={() => setDayIndex(i)}
             className={`min-h-11 shrink-0 rounded-full border-[1.5px] px-4 text-sm font-medium first-letter:uppercase ${
               i === dayIndex ? "border-castagna bg-castagna text-pane" : "border-pane-line bg-[#fffaf1] hover:border-castagna/50"
@@ -495,7 +494,7 @@ function SummaryStep({
             {contact.name}, {contact.phone}
           </p>
           {contact.email && <p className="text-sm text-muted">{contact.email}</p>}
-          {contact.notes && <p className="mt-1 text-sm italic">„{contact.notes}”</p>}
+          {contact.notes && <p className="mt-1 text-sm">„{contact.notes}”</p>}
         </SummaryRow>
         <div className="py-4">
           <h3 className="font-sans text-sm font-semibold text-muted">Płatność</h3>
