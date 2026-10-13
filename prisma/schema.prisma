@@ -1,0 +1,76 @@
+// Schemat bazy Trattoria Sole.
+// Lokalnie: plik SQLite (file:./dev.db). Produkcja: Turso (libSQL) – ten sam schemat.
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+/// Zamówienie na odbiór osobisty.
+/// status: NEW | PREPARING | READY | PICKED_UP | CANCELLED
+model Order {
+  id           String      @id @default(cuid())
+  number       String      @unique
+  status       String      @default("NEW")
+  customerName String
+  phone        String
+  email        String?
+  notes        String?
+  pickupAt     DateTime
+  totalGrosze  Int
+  items        OrderItem[]
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+
+  @@index([pickupAt])
+  @@index([status])
+}
+
+/// Pozycja zamówienia – nazwa i cena kopiowane w chwili zamówienia,
+/// żeby późniejsza edycja menu nie zmieniała historii.
+model OrderItem {
+  id        String @id @default(cuid())
+  orderId   String
+  order     Order  @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  dishId    String
+  name      String
+  unitPrice Int
+  quantity  Int
+
+  @@index([orderId])
+}
+
+/// Rezerwacja stolika.
+/// status: NEW | CONFIRMED | CANCELLED
+model Reservation {
+  id        String   @id @default(cuid())
+  status    String   @default("NEW")
+  name      String
+  phone     String
+  email     String?
+  guests    Int
+  startsAt  DateTime
+  notes     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([startsAt])
+}
+
+/// Nadpisanie dostępności dania z menu.json („chwilowo niedostępne”).
+/// Brak wiersza = danie dostępne.
+model DishAvailability {
+  dishId    String   @id
+  available Boolean  @default(true)
+  updatedAt DateTime @updatedAt
+}
+
+/// Liczniki, np. kolejne numery zamówień (TS-0001, TS-0002…).
+model Counter {
+  name  String @id
+  value Int    @default(0)
+}

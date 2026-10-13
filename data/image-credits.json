@@ -1,0 +1,317 @@
+[
+  {
+    "file": "/images/hero/stol-noc.webp",
+    "shape": "wide",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/a-table-with-plates-of-food-and-glasses-of-beer-P6hIjnqOJRQ",
+    "author": "Caroline Roose",
+    "authorUrl": "https://unsplash.com/@carolineclementine",
+    "download": "https://images.unsplash.com/photo-1663841365654-0269b135b2af"
+  },
+  {
+    "file": "/images/hero/talerz.webp",
+    "shape": "square",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/cooked-food-on-round-white-ceramic-plate-cC0_UO1Obg4",
+    "author": "Louis Hansel",
+    "authorUrl": "https://unsplash.com/@louishansel",
+    "download": "https://images.unsplash.com/photo-1564936281291-294551497d81"
+  },
+  {
+    "file": "/images/about/piec.webp",
+    "shape": "wide",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/an-oven-with-a-fire-inside-of-it-souvaTHUJkY",
+    "author": "Ambitious Studio* | Rick Barrett",
+    "authorUrl": "https://unsplash.com/@weareambitious",
+    "download": "https://images.unsplash.com/photo-1646656352194-7db15ee021bf"
+  },
+  {
+    "file": "/images/dishes/bruschetta-al-pomodoro.webp",
+    "shape": "square",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/sliced-bread-with-sliced-tomato-and-green-leaf-vegetable-on-brown-wooden-chopping-board-UClE2VFapSg",
+    "author": "Konstantinas Ladauskas",
+    "authorUrl": "https://unsplash.com/@konstantinas",
+    "download": "https://images.unsplash.com/photo-1630230596944-6373069c837d"
+  },
+  {
+    "file": "/images/dishes/burrata-e-pomodorini.webp",
+    "shape": "square",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/sliced-fruit-on-white-ceramic-plate-UE7YA2igrxQ",
+    "author": "Sebastian Coman Photography",
+    "authorUrl": "https://unsplash.com/@sebastiancoman",
+    "download": "https://images.unsplash.com/photo-1580638149300-65f0b9e8fbff"
+  },
+  {
+    "file": "/images/dishes/carpaccio-di-manzo.webp",
+    "shape": "square",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/green-leaves-covered-meat-slices-on-white-plate-4LDTmCWmIKo",
+    "author": "Dmitriy Frantsev",
+    "authorUrl": "https://unsplash.com/@vapricot",
+    "download": "https://images.unsplash.com/photo-1577357573416-3abf4ac6ff9e"
+  },
+  {
+    "file": "/images/dishes/arancini-siciliani.webp",
+    "shape": "square",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/crispy-arancini-with-tomato-sauce-are-delightful-tCIFd8dkUAs",
+    "author": "Zoshua Colah",
+    "authorUrl": "https://unsplash.com/@zoshuacolah",
+    "download": "https://images.unsplash.com/photo-1751199393301-1fcbd21bd34d"
+  },
+  {
+    "file": "/images/dishes/spaghetti-alla-carbonara.webp",
+    "shape": "square",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/a-white-plate-topped-with-spaghetti-and-bacon-fDLBn8X_IlU",
+    "author": "Rob Wicks",
+    "authorUrl": "https://unsplash.com/@robwicks",
+    "download": "https://images.unsplash.com/photo-1633337474564-1d9478ca4e2e"
+  },
+  {
+    "file": "/images/dishes/tonnarelli-cacio-e-pepe.webp",
+    "shape": "square",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/a-plate-of-pasta-on-a-table-oW5eupy_Yhg",
+    "author": "Rosa Rafael",
+    "authorUrl": "https://unsplash.com/@rosarafael",
+    "download": "https://images.unsplash.com/photo-1693342754896-0520a7f2bc59"
+  },
+  {
+    "file": "/images/dishes/penne-all-arrabbiata.webp",
+    "shape": "square",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/penne-pasta-with-tomato-sauce-dinner-ywly0g7pU1w",
+    "author": "Zoshua Colah",
+    "authorUrl": "https://unsplash.com/@zoshuacolah",
+    "download": "https://images.unsplash.com/photo-1788599760197-81e54ec9c36a"
+  },
+  {
+    "file": "/images/dishes/tagliatelle-al-ragu.webp",
+    "shape": "square",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/pasta-dish-on-black-ceramic-bowl-d9jcPTRD9fo",
+    "author": "Nicholas Grande",
+    "authorUrl": "https://unsplash.com/@ndg_visuals",
+    "download": "https://images.unsplash.com/photo-1611270629569-8b357cb88da9"
+  },
+  {
+    "file": "/images/dishes/linguine-ai-frutti-di-mare.webp",
+    "shape": "square",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/a-plate-of-pasta-with-clams-and-shrimp-igtFLRG0tQc",
+    "author": "Sarda Bamberg",
+    "authorUrl": "https://unsplash.com/@sarda_bamberg",
+    "download": "https://images.unsplash.com/photo-1672636402078-4b957a572e4e"
+  },
+  {
+    "file": "/images/dishes/risotto-ai-funghi-porcini.webp",
+    "shape": "square",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/cooked-rice-with-green-vegetable-on-white-round-plate-D9fAmtjC284",
+    "author": "Max Griss",
+    "authorUrl": "https://unsplash.com/@grissphoto",
+    "download": "https://images.unsplash.com/photo-1609770424775-39ec362f2d94"
+  },
+  {
+    "file": "/images/dishes/pizza-margherita.webp",
+    "shape": "square",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/cooked-food-on-round-white-ceramic-plate-cC0_UO1Obg4",
+    "author": "Louis Hansel",
+    "authorUrl": "https://unsplash.com/@louishansel",
+    "download": "https://images.unsplash.com/photo-1564936281291-294551497d81"
+  },
+  {
+    "file": "/images/dishes/pizza-diavola.webp",
+    "shape": "square",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/pizza-with-pepperoni-and-ham-_P76trHTWDE",
+    "author": "Fernando Andrade",
+    "authorUrl": "https://unsplash.com/@thisisnando",
+    "download": "https://images.unsplash.com/photo-1628840042765-356cda07504e"
+  },
+  {
+    "file": "/images/dishes/pizza-prosciutto-e-rucola.webp",
+    "shape": "square",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/a-pizza-topped-with-greens-and-meat-on-a-wooden-table-LppAkC7s6u4",
+    "author": "Julian Rojas Dättwyler",
+    "authorUrl": "https://unsplash.com/@julianzando",
+    "download": "https://images.unsplash.com/photo-1528830984461-4d5c3cc1abf0"
+  },
+  {
+    "file": "/images/dishes/pizza-ortolana.webp",
+    "shape": "square",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/pizza-with-cheese-and-green-leaves-jsZKLRi7toU",
+    "author": "Laure Noverraz",
+    "authorUrl": "https://unsplash.com/@lornov",
+    "download": "https://images.unsplash.com/photo-1617470702892-e01504297e84"
+  },
+  {
+    "file": "/images/dishes/pizza-sole.webp",
+    "shape": "square",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/white-stones-FMCEVooWAoU",
+    "author": "Anastasiia Rozumna",
+    "authorUrl": "https://unsplash.com/@rozumna",
+    "download": "https://images.unsplash.com/photo-1571477716456-d27a74eba772"
+  },
+  {
+    "file": "/images/dishes/saltimbocca-alla-romana.webp",
+    "shape": "square",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/chicken-marsala-with-mushrooms-in-a-white-bowl-91RjzX09aNw",
+    "author": "David Trinks",
+    "authorUrl": "https://unsplash.com/@dtrinksrph",
+    "download": "https://images.unsplash.com/photo-1751445019184-36e909fb17fb"
+  },
+  {
+    "file": "/images/dishes/branzino-al-forno.webp",
+    "shape": "square",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/a-fish-and-vegetables-on-a-slate-board-1r0ZjbaQF9I",
+    "author": "Alina Bosakova",
+    "authorUrl": "https://unsplash.com/@olinaolinaolinaolinaolina",
+    "download": "https://images.unsplash.com/photo-1644784643137-b9073dd262f6"
+  },
+  {
+    "file": "/images/dishes/pollo-alla-cacciatora.webp",
+    "shape": "square",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/chicken-with-tomatoes-and-basil-Wd00iFID5aI",
+    "author": "Rodrigo Rodrigues | WOLF Λ R T",
+    "authorUrl": "https://unsplash.com/@wolfart32",
+    "download": "https://images.unsplash.com/photo-1748864221145-269b4a23a67e"
+  },
+  {
+    "file": "/images/dishes/melanzane-alla-parmigiana.webp",
+    "shape": "square",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/a-dish-of-food-on-a-wooden-table-Y9iaZNbUHtQ",
+    "author": "Moira Nazzari",
+    "authorUrl": "https://unsplash.com/@moiranazzari",
+    "download": "https://images.unsplash.com/photo-1632229095740-8c75082087c5"
+  },
+  {
+    "file": "/images/dishes/tiramisu.webp",
+    "shape": "square",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/white-and-brown-ceramic-cake-4El3DUkQs2g",
+    "author": "Marianna OLE",
+    "authorUrl": "https://unsplash.com/@marianna_ole",
+    "download": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9"
+  },
+  {
+    "file": "/images/dishes/panna-cotta.webp",
+    "shape": "square",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/strawberry-on-white-ceramic-plate-eKEBV50VeZs",
+    "author": "Adél Grőber",
+    "authorUrl": "https://unsplash.com/@ninszi",
+    "download": "https://images.unsplash.com/photo-1613505411792-208b15f862b0"
+  },
+  {
+    "file": "/images/dishes/cannoli-siciliani.webp",
+    "shape": "square",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/a-plate-of-food-X0DC3E-jrn0",
+    "author": "Amy Vann",
+    "authorUrl": "https://unsplash.com/@girl_behindthelens",
+    "download": "https://images.unsplash.com/photo-1654870032519-9db00597cd78"
+  },
+  {
+    "file": "/images/dishes/affogato-al-caffe.webp",
+    "shape": "square",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/person-pouring-brown-liquid-on-clear-drinking-glass-wKz7L5wchds",
+    "author": "Jojo Yuen (sharemyfoodd)",
+    "authorUrl": "https://unsplash.com/@jojoyuen",
+    "download": "https://images.unsplash.com/photo-1594631661960-34762327295a"
+  },
+  {
+    "file": "/images/dishes/limonata-della-casa.webp",
+    "shape": "square",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/lime-juice-on-drinking-glass-beside-sliced-limes-p5EiqkBYIEE",
+    "author": "Francesca Hotchin",
+    "authorUrl": "https://unsplash.com/@franhotchin",
+    "download": "https://images.unsplash.com/photo-1507281549113-040fcfef650e"
+  },
+  {
+    "file": "/images/dishes/aperol-spritz.webp",
+    "shape": "square",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/two-footed-glass-on-table-YCj4q9AArtk",
+    "author": "Julia Solonina",
+    "authorUrl": "https://unsplash.com/@julie_soul",
+    "download": "https://images.unsplash.com/photo-1564090654281-eb1db56d15fc"
+  },
+  {
+    "file": "/images/dishes/chianti-classico.webp",
+    "shape": "square",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/person-pouring-red-wine-on-wine-glass-etWlaoFnTl4",
+    "author": "Lefteris kallergis",
+    "authorUrl": "https://unsplash.com/@lefterisk",
+    "download": "https://images.unsplash.com/photo-1553361371-9b22f78e8b1d"
+  },
+  {
+    "file": "/images/gallery/sala.webp",
+    "shape": "original",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/a-row-of-tables-sitting-outside-of-a-restaurant-at-night-nMwm6JeNxTI",
+    "author": "Jahanzeb Ahsan",
+    "authorUrl": "https://unsplash.com/@jahan_photobox",
+    "download": "https://images.unsplash.com/photo-1726873800099-53f5496281e0"
+  },
+  {
+    "file": "/images/gallery/piec.webp",
+    "shape": "original",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/pizza-baking-in-wood-fired-oven-vHRFraV4U00",
+    "author": "Fabrizio Pullara",
+    "authorUrl": "https://unsplash.com/@fabrizio_photopf",
+    "download": "https://images.unsplash.com/photo-1622880833523-7cf1c0bd4296"
+  },
+  {
+    "file": "/images/gallery/makaron.webp",
+    "shape": "original",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/person-in-black-sweater-and-black-pants-sitting-on-white-chair-ffQsz3EuG0U",
+    "author": "Alex Lvrs",
+    "authorUrl": "https://unsplash.com/@alexlvrs",
+    "download": "https://images.unsplash.com/photo-1610649333217-31ea4ea0df1e"
+  },
+  {
+    "file": "/images/gallery/wino.webp",
+    "shape": "original",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/clear-wine-glasses-xkoiWx2S9_o",
+    "author": "Fabio Sangregorio",
+    "authorUrl": "https://unsplash.com/@fabiosangregorio",
+    "download": "https://images.unsplash.com/photo-1571163940357-8b2ede0bf787"
+  },
+  {
+    "file": "/images/gallery/stol.webp",
+    "shape": "original",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/friends-are-enjoying-a-delicious-meal-together-DRTqdLhJe9E",
+    "author": "Andrew Amelianovich",
+    "authorUrl": "https://unsplash.com/@ftzzgrld",
+    "download": "https://images.unsplash.com/photo-1659690402718-ea07d943fd42"
+  },
+  {
+    "file": "/images/gallery/kuchnia.webp",
+    "shape": "original",
+    "source": "Unsplash",
+    "photoUrl": "https://unsplash.com/photos/chef-cooking-in-a-professional-kitchen-at-night-oQxFV87QLpg",
+    "author": "Eugeniya Belova",
+    "authorUrl": "https://unsplash.com/@evgeeeenchik",
+    "download": "https://images.unsplash.com/photo-1769955817432-641929f613f0"
+  }
+]
